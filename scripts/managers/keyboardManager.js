@@ -83,8 +83,6 @@ window.addEventListener("keyup", function(e) {
 
 function intInputsValue()
 {
-    CONST.direction = 0;
-    CONST.direction = 0;
     if(CONST.keysStillDown.left)
         CONST.direction.x = -1;
     if(CONST.keysStillDown.right)
