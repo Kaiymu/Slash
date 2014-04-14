@@ -124,7 +124,7 @@ function gameloop()
     keyboardManager.intInputsValue();
     CONST.Player.update();
     CONST.eventManager.emit('update');
-    gamePads()
+    gamePads();
 }
 
 // GamePad 1 = 0, 1
@@ -132,11 +132,11 @@ function gameloop()
 
 function gamePads()
 {
-    gamepads = navigator.webkitGetGamepads();
+    gamepads = Gamepad.getStates();
 
     for(var i = 0; i < gamepads.length; i++)
     {
-        if(gamepads[i] !== undefined){
+        if(gamepads[i]){
 
             if(gamepads[i].axes[0] > 0.3 || gamepads[i].axes[0] <- 0.3 || gamepads[i].axes[1] > 0.3 || gamepads[i].axes[1] <- 0.3){
                 CONST.direction.x = gamepads[i].axes[0];
